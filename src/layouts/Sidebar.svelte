@@ -3,7 +3,7 @@
 	import { sidebarStore } from '../stores/sidebar';
 
 	import BrandLogo from '../components/BrandLogo.svelte';
-	import { type ListItemType, mainList, subList } from '$lib/Sidebar/menuData';
+	import { type ListItemType, mainList, subList } from '$lib/components/Sidebar/menuData';
 
 	$effect(() => {
 		const pathname = $page.url.pathname.split('/')[1];
