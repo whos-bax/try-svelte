@@ -4,6 +4,7 @@
 
 	import BrandLogo from '../components/BrandLogo.svelte';
 	import { type ListItemType, mainList, subList } from '$lib/components/Sidebar/menuData';
+	import { goto } from '$app/navigation';
 
 	$effect(() => {
 		const pathname = $page.url.pathname.split('/')[1];
@@ -13,11 +14,13 @@
 	});
 
 	function handleMenuClick(event: MouseEvent, item: ListItemType) {
+		event.preventDefault();
 		sidebarStore.set($sidebarStore === item.id ? '' : item.id);
 
 		if (item.children && item.children.length > 0) {
-			event.preventDefault();
 			console.log('Menu item with children clicked:', item);
+		} else {
+			goto(item.link);
 		}
 	}
 

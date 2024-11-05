@@ -1,7 +1,5 @@
 import axios, { AxiosError } from 'axios';
-import { getCookieValue } from '$lib/api/common';
-
-const API_BASE_URL = 'https://api.tensorcube.net';
+import { API_BASE_URL, getCookieValue } from '$lib/api/common';
 
 interface UserApiResponse {
 	status: number | string;
