@@ -2,9 +2,9 @@
 
 <script>
 	import userApi from '$lib/api/user.ts';
+	import projectApi from '$lib/api/project.ts';
 	import { getCookieValue } from '$lib/api/common.ts';
 	import { goto } from '$app/navigation';
-	import projectApi from '$lib/api/project.ts';
 
 	let isLogin = $state(false);
 	let userData = $state();
